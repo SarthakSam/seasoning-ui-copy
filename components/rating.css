@@ -1,0 +1,44 @@
+.rating__container {
+    display: flex;
+    font-size: 1.2rem;
+    /* flex-direction: row-reverse; */
+}
+
+.rating__container.rating--md {
+    font-size: 2rem;
+}
+
+.rating__container.rating--lg {
+    font-size: 2.5rem;
+}
+
+.rating__input {
+    display: none;
+}
+
+.rating__control::before {
+    font-family: Font Awesome\ 5 Free;
+}
+
+
+.rating__input:checked ~ .rating__control::before {
+    font-weight: 400;
+}
+
+.rating--heart .rating__control::before{
+    content: '\f004';
+    color: var(--color-pink);
+    font-size: inherit;
+    font-weight: 700;
+    cursor: pointer;
+    margin: 0 0.1em;
+}
+
+.rating--star .rating__control::before{
+    content: '\f005';
+    font-size: inherit;
+    color: var(--color-yellow);
+    margin: 0 0.1em;
+    cursor: pointer;
+    font-weight: 700;
+}

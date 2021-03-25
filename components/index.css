@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&display=swap');
+
+@import url('./colors.css');
+@import url('./layout-primitives.css');
+@import url('./buttons.css');
+@import url('./nav.css');
+@import url('./popup.css');
+@import url('./rating.css');
+@import url('./typography.css');
+@import url('./select-select-menu.css');
+@import url('./badges\,pills&avatars.css');
+@import url('./input.css');
+@import url('./spinner.css');
+@import url('./alerts.css');
+
+* {
+    font-family: 'Dosis', sans-serif;
+    color: var(--font-color);
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --app-primary-color: rgba(16,112,202,.09);
+}
+
+.segment {
+    margin: 0.5em 0;
+    padding: 0.5em 0;
+}

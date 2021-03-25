@@ -1,0 +1,134 @@
+.input {
+    border: 1px solid var(--color-grey);
+    display: inline-flex;
+    font-size: 1em;
+    /* margin: 10px; */
+    align-items: center;
+    background: white;
+}
+
+.input > input {
+    border: none;
+    outline: none;
+    background: inherit;
+    padding: 0.8em;
+    color: inherit;
+    flex: 1;
+}
+
+.input > input::placeholder {
+    color: var(--color-grey);
+}
+
+.input:focus {
+    border: 1px solid var(--color-blue);
+}
+
+.input.focus {
+    border: 1px solid var(--color-blue);
+}
+
+.input.disabled {
+    /* background: var(--color-grey); */
+    pointer-events: none;
+    color: grey;
+    cursor: not-allowed;
+}
+
+.input.disabled > input{
+    pointer-events: none;
+    cursor: not-allowed;
+}
+
+.input.error {
+    border: 0.5px solid rgb(238, 163, 178);
+    outline-color: rgb(238, 163, 178);
+    color: var(--color-red);
+    background: rgba(248, 229, 229, 0.6);
+}
+
+.input.error > input::placeholder {
+    color: rgb(238, 163, 178, 0.8);
+}
+
+.input--icon {
+    padding: 0 0.2em;
+}
+
+.input--icon i {
+    color: inherit;
+    margin: 0 0.3em;
+}
+
+.input__label {
+    display: inline;
+    padding: 0.7em;
+    /* padding: 7px 10px; */
+    border-radius: 5px;
+    border-left: 0;
+    border-bottom: 0;
+    color: inherit;
+    background-color: var(--color-grey);
+}
+
+.input--label.error > .input__label {
+    background-color: rgb(243, 114, 109);
+} 
+
+.input__label--append {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-left: 0.5px solid var(--color-grey);
+}
+
+.input__label--prepend {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right: 0.5px solid var(--color-grey);
+}
+
+.input__label--basic {
+    background: transparent;
+}
+
+.input.input--transparent {
+    border: none;
+    background: none;
+}
+
+.input.input--inverted {
+    border: none;
+    background: none;
+}
+
+.input.input--inverted > input {
+    color: var(--color-white);
+}
+
+.input.input--inverted > .input__label--basic {
+    color: var(--color-white);
+}
+
+.input.input--inverted > input::placeholder {
+    color: var(--color-dark-grey);
+}
+
+.input.input--transparent .input__label--basic {
+    border: none;
+}
+
+.input.input--fluid {
+    display: flex;
+}
+
+.input.input--small > input {
+  font-size: 0.7em;
+}
+
+.input.input--medium > input {
+    font-size: 0.9em;
+  }
+
+  .input.input--large > input {
+    font-size: 1.2em;
+  }
