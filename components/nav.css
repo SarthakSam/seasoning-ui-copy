@@ -1,0 +1,137 @@
+.nav {
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+    position: relative;
+    /* color: var(color-grey); */
+    /* background-color: white; */
+}
+
+/* #nav__toggler1, #nav__toggler2, #nav__toggler3, #nav__toggler4 {
+    display: none;
+} */
+
+.nav__toggler {
+    display: none;
+}
+
+.nav__title {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.2rem;
+    padding: 0 0.8em;
+    cursor: pointer;
+    color: inherit;
+    /* color: var(--color-black); */
+}
+
+.nav.nav--dark > .nav__title {
+    color: white;
+}
+
+.nav__link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.nav__content {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    color: inherit;
+}
+
+.nav__list {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    align-items: center;
+    color: inherit;
+}
+
+.nav__list:first-child {
+    margin-right: auto;
+}
+
+.nav__item {
+    padding: 0.4em 0.5em;
+    cursor: pointer;
+    color: inherit;
+}
+
+.nav__item.dropdown > .btn {
+    border: none;
+    background-color: transparent;
+    color: inherit;
+    padding-left: 0;
+}
+
+.nav__item.active {
+    color: var(--color-black);
+}
+
+.nav.nav--dark .nav__item.active {
+    color: white;
+}
+
+
+.nav__item.disabled {
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.nav__toggler--button {
+    display: none;
+}
+
+@media screen and (max-width: 710px) {
+
+    .nav__toggler--button {
+        display: block;
+        font-size: 1.1rem;
+        cursor: pointer;
+    }
+
+    .nav.nav--dark > .nav__toggler--button > i {
+        color: white;
+    }
+
+    .nav__toggler ~ .nav__content {
+        height: 0;
+        position: absolute;
+        top: 100%;
+        background: inherit;
+        left: 0;
+        width: 100%;
+        transition: height .5s;
+        flex-direction: column;
+        align-items: center;
+        display: flex;
+        overflow: hidden;
+        z-index: 1000;
+    }
+
+    #nav__toggler1:checked ~ .nav__content, #nav__toggler2:checked ~ .nav__content, #nav__toggler3:checked ~ .nav__content, #nav__toggler4:checked ~ .nav__content {
+        height: 200px;
+        transition: height .5s;
+    }
+
+    .nav__toggler ~ .nav__content > .nav__list {
+        display: block;
+        margin: 0.2em auto;
+        align-items: center;
+        text-align: center;
+    }
+
+    .nav__toggler ~ .nav__content .nav__item {
+        padding: 0.3em 1em;
+    }
+
+    .nav__form {
+       display: inline;
+    }
+
+    .nav {
+        justify-content: space-between;
+        padding: 0.5rem 1rem;
+    }
+}

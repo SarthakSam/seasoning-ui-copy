@@ -1,0 +1,116 @@
+.nav-container {
+    position: relative;
+    grid-area: nav;
+    height: 60px;
+}
+
+.nav.nav--custom {
+    padding: 0.7em 1em;
+    /* grid-area: nav; */
+    border-bottom: 1px solid var(--color-grey);
+    box-shadow: 0 0 1px rgb(67 90 111 / 47%), 0 2px 4px -2px rgb(67 90 111 / 30%);
+    position: fixed;
+    width: 100%;
+    z-index: 99999;
+    background-color: white;
+}
+
+@media screen and (max-width: 710px) {
+    .nav #nav--custom__toggler:checked ~ .nav__content {
+        height: 120px;
+        box-shadow: 0 0 1px rgb(67 90 111 / 47%), 0 2px 4px -2px rgb(67 90 111 / 30%);
+    }
+}
+
+.nav--custom .nav__item.active {
+    color: var(--color-blue);
+    background-color: var(--app-primary-color);
+}
+
+.nav.nav--custom .nav__content {
+    background-color: white;
+}
+
+.logo {
+    height: 20px;
+    width: 20px;
+}
+
+.home {
+    display: flex;
+    flex-direction: column;
+}
+
+.home__intro > div{
+    display: flex;
+    align-items: center;
+    margin: 6.5em auto;
+}
+
+.home__intro__buttons {
+    margin: 1.5em 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.home__intro__buttons > a {
+    margin: 1em 1em 0 0 ;
+    text-decoration: none;
+}
+
+.home__features * {
+    color: white;
+}
+
+.home__features {
+    background: #43af79;
+    padding: 2.5em 0;
+}
+
+.home__features > div {
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+}
+
+.home__overview {
+    background: var(--app-primary-color);
+    padding: 1.5em 0;
+}
+
+.home__overview > div {
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+}
+
+.home__overview .card {
+    border: none;
+    box-shadow: none;
+}
+
+.home__overview .card .card__image {
+    width: 100%;
+}
+
+.home__overview .card .card__title {
+    font-weight: 800;
+}
+
+.home__overview .card .card__description {
+    font-size: 1.2rem;
+}
+
+.home__footer * {
+    color: white;
+}
+
+.home__footer {
+    background: var(--color-black);
+    padding: 1.5em 0;
+}
+
+.home__footer > div {
+    margin: auto;
+    text-align: center;
+}

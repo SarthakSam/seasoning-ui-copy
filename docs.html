@@ -1,0 +1,2112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>seasoning</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.60.0/codemirror.min.js" integrity="sha512-hc0zo04EIwTzKLvp2eycDTeIUuvoGYYmFIjYx7DmfgQeZPC5N27sPG2wEQPq8d8fCTwuguLrI1ffatqxyTbHJw==" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.60.0/codemirror.min.css" integrity="sha512-xIf9AdJauwKIVtrVRZ0i4nHP61Ogx9fSRAkCLecmE2dL/U8ioWpDvFCAy4dcfecN72HHB9+7FfQj3aiO68aaaw==" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.60.0/mode/xml/xml.min.js" integrity="sha512-XPih7uxiYsO+igRn/NA2A56REKF3igCp5t0W1yYhddwHsk70rN1bbbMzYkxrvjQ6uk+W3m+qExHIJlFzE6m5eg==" crossorigin="anonymous"></script>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.60.0/theme/nord.min.css" integrity="sha512-sPc4jmw78pt6HyMiyrEt3QgURcNRk091l3dZ9M309x4wM2QwnCI7bUtsLnnWXqwBMECE5YZTqV6qCDwmC2FMVA==" crossorigin="anonymous" /> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.60.0/theme/oceanic-next.min.css" integrity="sha512-pxwDRd51pEchJ668feeV2SkNebp6MO/rDEc+/0AoJBYBvSuc+DKc2m00spcQMN4eFpRpsfaqEV+u7VxntQQMjA==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.60.0/theme/lucario.min.css" integrity="sha512-8CW1guslz3VSq681ZW1+pB3YXhfq5tGNqMsINg+1MyluwAu24D0LKlKVih8g/i1nYQOfhkenzNC0TZX9ZT5Nzg==" crossorigin="anonymous" />
+
+    <!-- <link rel="stylesheet" href="./codemirror-5.60.0/lib/codemirror.css">
+    <script src="./codemirror-5.60.0/lib/codemirror.js"></script>
+    <script src="./codemirror-5.60.0/mode/xml/xml.js"></script> -->
+    <!-- <link rel="stylesheet" href="./codemirror-5.60.0/theme/.css">  -->
+
+
+    <link rel="stylesheet" href="docs.css">
+    <link rel="stylesheet" href="./components/index.css">
+    <script src="./docs.js"></script>
+</head>
+<body>
+    <div class="docs">
+        <div class="nav-container">
+            <nav class="nav nav--custom">
+                <a href="./index.html" class="nav__title"> <img src="./assets/logo.png" class="logo" alt=""> SEASONING</a>
+                <input type="checkbox" id="nav--custom__toggler" class="nav__toggler">
+                <label for="nav--custom__toggler" class="nav__toggler--button">
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                </label>
+                <div class="nav__content">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="./components.html" class="nav__link">COMPONENTS</a>
+                        </li>
+                        <li class="nav__item active">
+                            <a href="./docs.html" class="nav__link">DOCS</a>
+                        </li>
+                    </ul>
+    
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="https://github.com/SarthakSam/easy-ui" class="nav__link"><i class="fab fa-github"></i>GITHUB</a>
+                        </li>
+                    </ul>
+                    
+                </div>
+            </nav>
+    
+        </div>
+
+        <input type="checkbox" id="sideNav__toggler">
+        <label for="sideNav__toggler" class="sideNav__open">
+            <i class="far fa-compass"></i>
+        </label>
+        <div class="sideNav">
+            <label for="sideNav__toggler" class="sideNav__close">
+                <i class="fas fa-times"></i>
+            </label>
+            <div class="sideNav__content">
+                <ul>
+                    <li class="list__item">
+                        <a href="#getting-started">Getting Started</a>
+                    </li>
+                    <li class="list__item">
+                        <a href="#layout-primitives">Layout Primitives</a>
+                    </li>
+                    <li class="list__item">
+                        <a href="#typography">Typography</a>
+                    </li>
+                    <li class="list__item">
+                        <a href="#colors">Colors</a>
+                    </li>
+                    <li class="list__item">
+                        <a href="#images">Images</a>
+                    </li>
+                    <li class="list__item">
+                        <a href="#button">Button</a>
+                    </li>
+                    <li class="list__item">
+                        <a href="#badge-and-pill">Badge and Pill</a>
+                    </li>
+                    <li class="list__item">
+                        <a href="#avatar">Avatar</a>
+                    </li>
+                    <li class="list__item">
+                        <a href="#text-input">Text Input</a>
+                    </li>
+                    <li class="list__item">
+                        <a href="#select">Select</a>
+                    </li>
+                    <li class="list__item">
+                        <a href="#select-menu">Select Menu</a>
+                    </li>
+                    <li class="list__item">
+                        <a href="#navbar">NavBar</a>
+                    </li>
+                    <li class="list__item">
+                        <a href="#rating">Rating</a>
+                    </li>
+                    <li class="list__item">
+                        <a href="#alert">Alert</a>
+                    </li>
+                    <li class="list__item">
+                        <a href="#spinner">Spinner</a>
+                    </li>
+                    <li class="list__item">
+                        <a href="#popup">Popup</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <main class="docs__content">
+
+            <section class="docs__section" id="getting started">
+                <h2 class="h2"><a href="#getting-started">Getting Started</a></h2>
+                <div class="row">
+                    <div class="col-12 row">
+                        <h4 class="h4 col-12 m-0">For integrating via CDN -</h4>
+                        <p class="col-12 m-0 text--lead">Just add below link in your html file.</p>
+                        <textarea class="code">
+                            <link rel="stylesheet" href="https://seasoning-ui.netlify.app/seasoning.css">
+                        </textarea>
+                    </div>
+
+                    <div class="col-12 row">
+                        <h4 class="h4 col-12 m-0">For integrating via locally downloaded file -</h4>
+                        <p class="col-7 m-0 text--lead">Simply click the download button and paste the file in your css directory.</p>
+                        <div class="col-2 m-0"></div>
+                        <div class="col-3 m-0">
+                            <a href="./seasoning.css" class="btn btn--primary" download="seasoning">Download</a>
+                        </div>
+                            
+                    </div>
+                </div>
+            </section>
+
+            <section class="docs__section" id="layout-primitives">
+                <h2 class="h2"><a href="#layout-primitives">Layout Primitives</a></h2>
+                <div class="row">
+                    <div class="col-12 layout-primitives__block">col-12</div>
+                    <div class="col-6 layout-primitives__block">col-6</div>
+                    <div class="col-6 layout-primitives__block">col-6</div>
+                    <div class="col-4 layout-primitives__block">col-4</div>
+                    <div class="col-4 layout-primitives__block">col-4</div>
+                    <div class="col-4 layout-primitives__block">col-4</div>
+                    <div class="col-3 layout-primitives__block">col-3</div>
+                    <div class="col-3 layout-primitives__block">col-3</div>
+                    <div class="col-3 layout-primitives__block">col-3</div>
+                    <div class="col-3 layout-primitives__block">col-3</div>
+                    <div class="col-2 layout-primitives__block">col-2</div>
+                    <div class="col-2 layout-primitives__block">col-2</div>
+                    <div class="col-2 layout-primitives__block">col-2</div>
+                    <div class="col-2 layout-primitives__block">col-2</div>
+                    <div class="col-2 layout-primitives__block">col-2</div>
+                    <div class="col-2 layout-primitives__block">col-2</div>
+                    <div class="col-1 layout-primitives__block">col-1</div>
+                    <div class="col-2 layout-primitives__block">col-2</div>
+                    <div class="col-5 layout-primitives__block">col-5</div>
+                    <div class="col-3 layout-primitives__block">col-3</div>
+                    <div class="col-1 layout-primitives__block">col-1</div>
+
+                </div>
+                <div class="row">
+                    <input type="checkbox" id="layout-primitives-visibility__btn" class="code-visibility-toggler">
+                    <div class="col-12">
+                        <label for="layout-primitives-visibility__btn" class="code-visibility__button">
+                            <i class="fa fa-code" aria-hidden="true"></i>
+                        </label>
+                    </div>
+                    <div class="col-12 code__container">
+                        <textarea class="code">
+                            <div class="col-12 layout-primitives__block">col-12</div>
+                            <div class="col-11 layout-primitives__block">col-11</div>
+                            <div class="col-10 layout-primitives__block">col-10</div>
+                            <div class="col-9 layout-primitives__block">col-9</div>
+                            <div class="col-8 layout-primitives__block">col-8</div>
+                            <div class="col-7 layout-primitives__block">col-7</div>
+                            <div class="col-6 layout-primitives__block">col-6</div>
+                            <div class="col-5 layout-primitives__block">col-5</div>
+                            <div class="col-4 layout-primitives__block">col-4</div>
+                            <div class="col-3 layout-primitives__block">col-3</div>
+                            <div class="col-2 layout-primitives__block">col-2</div>
+                            <div class="col-1 layout-primitives__block">col-1</div>
+                        </textarea>
+                    </div>
+                </div>
+            </section>
+
+            <section class="docs__section" id="typography">
+                <h2 class="h2"><a href="#typography">Typography</a></h2>
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="h1">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic, nisi?</h1>
+                        <h2 class="h2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, rerum.</h2>
+                        <h3 class="h3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, provident.</h3>
+                        <h4 class="h4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore, quasi.</h4>
+                        <h5 class="h5">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore, aliquam?</h5>
+                        <h6 class="h6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, maxime!</h6>
+                        
+                        <h1 class="heading--lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, facere.</h1>
+                        <p class="text--lead">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe, corporis!</p>
+            
+                        <p class="text--muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, repudiandae.</p>
+            
+            
+                    </div>
+                </div>
+            </section>
+
+            <section class="docs__section" id="colors">
+                <h2 class="h2"><a href="#colors">Colors</a></h2>
+                <div class="row">
+                    <div class="row col-12">
+                        <div class="card col-2 col-md-3 col-sm-4 p-0 card--colors">
+                            <div class="card__placeholder bg-red"></div>
+                            <p class="card__description">#B91C1C</p>
+                        </div>
+                        <div class="card col-2 col-md-3 col-sm-4 p-0 card--colors">
+                            <div class="card__placeholder bg-black"></div>
+                            <p class="card__description">#1F2937</p>
+                        </div>
+                        <div class="card col-2 col-md-3 col-sm-4 p-0 card--colors">
+                            <div class="card__placeholder bg-yellow"></div>
+                            <p class="card__description">#FBBF24</p>
+                        </div>
+                        <div class="card col-2 col-md-3 col-sm-4 p-0 card--colors">
+                            <div class="card__placeholder bg-blue"></div>
+                            <p class="card__description">#3B82F6</p>
+                        </div>
+                         <div class="card col-2 col-md-3 col-sm-4 p-0 card--colors">
+                            <div class="card__placeholder bg-dark-blue"></div>
+                            <p class="card__description">#1E3A8A</p>
+                        </div>
+                        <div class="card col-2 col-md-3 col-sm-4 p-0 card--colors">
+                            <div class="card__placeholder bg-green"></div>
+                            <p class="card__description">#21ba45</p>
+                        </div>
+                        <div class="card col-2 col-md-3 col-sm-4 p-0 card--colors">
+                            <div class="card__placeholder bg-dark-green"></div>
+                            <p class="card__description">#065F46</p>
+                        </div>
+                        <div class="card col-2 col-md-3 col-sm-4 p-0 card--colors">
+                            <div class="card__placeholder bg-purple"></div>
+                            <p class="card__description">#a333c8</p>
+                        </div>
+                        <div class="card col-2 col-md-3 col-sm-4 p-0 card--colors">
+                            <div class="card__placeholder bg-violet"></div>
+                            <p class="card__description">#6435c9</p>
+                        </div>
+                        <div class="card col-2 col-md-3 col-sm-4 p-0 card--colors">
+                            <div class="card__placeholder bg-pink"></div>
+                            <p class="card__description">#EC4899</p>
+                        </div>
+                        <div class="card col-2 col-md-3 col-sm-4 p-0 card--colors">
+                            <div class="card__placeholder bg-dark-pink"></div>
+                            <p class="card__description">#9D174D</p>
+                        </div>
+                        <div class="card col-2 col-md-3 col-sm-4 p-0 card--colors">
+                            <div class="card__placeholder bg-light-indigo"></div>
+                            <p class="card__description">#E0E7FF</p>
+                        </div>
+                        <div class="card col-2 col-md-3 col-sm-4 p-0 card--colors">
+                            <div class="card__placeholder bg-light-blue"></div>
+                            <p class="card__description">#BFDBFE</p>
+                        </div>
+                        <div class="card col-2 col-md-3 col-sm-4 p-0 card--colors">
+                            <div class="card__placeholder bg-light-green"></div>
+                            <p class="card__description">#D1FAE5</p>
+                        </div>
+                        <div class="card col-2 col-md-3 col-sm-4 p-0 card--colors">
+                            <div class="card__placeholder bg-olive"></div>
+                            <p class="card__description">#b5cc18</p>
+                        </div>
+                        <div class="card col-2 col-md-3 col-sm-4 p-0 card--colors">
+                            <div class="card__placeholder bg-teal"></div>
+                            <p class="card__description">#00b5ad</p>
+                        </div>
+                        <div class="card col-2 col-md-3 col-sm-4 p-0 card--colors">
+                            <div class="card__placeholder bg-grey"></div>
+                            <p class="card__description">#e0e1e2</p>
+                        </div>
+                        <div class="card col-2 col-md-3 col-sm-4 p-0 card--colors">
+                            <div class="card__placeholder" style="background: var(--color-dark-grey);"></div>
+                            <p class="card__description">#1070ca17</p>
+                        </div>
+                        <div class="card col-2 col-md-3 col-sm-4 p-0 card--colors">
+                            <div class="card__placeholder" style="background: var(--color-light-grey);"></div>
+                            <p class="card__description">#f8f9fa</p>
+                        </div>
+                        <div class="card col-2 col-md-3 col-sm-4 p-0 card--colors">
+                            <div class="card__placeholder" style="background: var(--color-light-white);"></div>
+                            <p class="card__description">#F5F3FF</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="docs__section" id="images">
+                <h2 class="h2"><a href="#images">Images</a></h2>
+                <div class="row">
+                    <div class="row col-12">
+                    </div>
+                </div>
+            </section>
+
+            <section class="docs__section" id="button">
+                <h2 class="h2"><a href="#button">Button</a></h2>
+                <div class="row">
+                    <div class="col-12">
+                        <h3>Simple Button</h3>
+                        <br>
+                        <button class="btn">Submit</button>
+                    </div>
+                </div>    
+
+                <div class="row">
+                    <input type="checkbox" id="simple-btn-visibility__btn" class="code-visibility-toggler">
+                    <div class="col-12">
+                        <label for="simple-btn-visibility__btn" class="code-visibility__button">
+                            <i class="fa fa-code" aria-hidden="true"></i>
+                        </label>
+                    </div>
+                    <div class="col-12 code__container">
+                        <textarea class="code">
+                            <button class="btn">Submit</button>
+                        </textarea>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <h3>Emphasized Buttons</h3>
+                        <p class="text--lead"> A button can be formatted to show different levels of emphasis</p>
+                        <br>
+                        <button class="btn btn--primary">Primary</button>
+                        <button class="btn btn--secondary">Secondary</button>
+                        <button class="btn btn--success">success</button>
+                        <button class="btn btn--warning">warning</button>
+                        <button class="btn btn--light">light</button>
+                        <button class="btn btn--red">red</button>
+                        <button class="btn btn--darkBlue">darkBlue</button>
+                        <button class="btn btn--darkGreen">darkGreen</button>
+                        <button class="btn btn--purple">purple</button>
+                        <button class="btn btn--violet">violet</button>
+                        <button class="btn btn--pink">pink</button>
+                        <button class="btn btn--teal">teal</button>
+                    </div>
+                </div>    
+
+                <div class="row">
+                    <input type="checkbox" id="emphasized-btn-visibility__btn" class="code-visibility-toggler">
+                    <div class="col-12">
+                        <label for="emphasized-btn-visibility__btn" class="code-visibility__button">
+                            <i class="fa fa-code" aria-hidden="true"></i>
+                        </label>
+                    </div>
+                    <div class="col-12 code__container">
+                        <textarea class="code">
+                            <button class="btn btn--primary">Primary</button>
+                            <button class="btn btn--secondary">Secondary</button>
+                            <button class="btn btn--success">success</button>
+                            <button class="btn btn--warning">warning</button>
+                            <button class="btn btn--light">light</button>
+                            <button class="btn btn--red">red</button>
+                            <button class="btn btn--darkBlue">darkBlue</button>
+                            <button class="btn btn--darkGreen">darkGreen</button>
+                            <button class="btn btn--purple">purple</button>
+                            <button class="btn btn--violet">violet</button>
+                            <button class="btn btn--pink">pink</button>
+                            <button class="btn btn--teal">teal</button>
+                        </textarea>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-12">
+                        <h3>Icon Button</h3>
+                        <p class="text--lead">A button can also have an icon</p>
+                        <br>
+                        <button class="btn btn__icon">
+                            <i class="fa fa-heart" aria-hidden="true"></i>
+                        </button>
+            
+                        <button class="btn btn__icon btn--primary">
+                            <i class="fa fa-motorcycle" aria-hidden="true"></i>
+                        </button>
+            
+                        <button class="btn btn__icon btn--purple">
+                            <i class="fa fa-mountain" aria-hidden="true"></i>
+                        </button>
+            
+                        <button class="btn btn__icon btn--danger">
+                            <i class="fa fa-newspaper" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>    
+
+                <div class="row">
+                    <input type="checkbox" id="icon-btn-visibility__btn" class="code-visibility-toggler">
+                    <div class="col-12">
+                        <label for="icon-btn-visibility__btn" class="code-visibility__button">
+                            <i class="fa fa-code" aria-hidden="true"></i>
+                        </label>
+                    </div>
+                    <div class="col-12 code__container">
+                        <textarea class="code">
+                            <button class="btn btn__icon">
+                                <i class="fa fa-heart" aria-hidden="true"></i>
+                            </button>
+                
+                            <button class="btn btn__icon btn--primary">
+                                <i class="fa fa-motorcycle" aria-hidden="true"></i>
+                            </button>
+                
+                            <button class="btn btn__icon btn--purple">
+                                <i class="fa fa-mountain" aria-hidden="true"></i>
+                            </button>
+                
+                            <button class="btn btn__icon btn--danger">
+                                <i class="fa fa-newspaper" aria-hidden="true"></i>
+                            </button>
+                        </textarea>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <h3>Outline Buttons</h3>
+                        <p class="text--lead">These buttons are less pronounced</p>
+                        <br>
+                        <button class="btn btn--outline">Outline</button>
+                        <button class="btn btn--outline btn--primary">Primary And outline</button>
+                        <button class="btn btn--outline btn--secondary">Secondary And outline</button>
+                        <button class="btn btn--outline btn--success">success And outline</button>
+                        <button class="btn btn--outline btn--warning">warning And outline</button>
+                        <button class="btn btn--outline btn--light">light And outline</button>
+                        <button class="btn btn--outline btn--red">red And outline</button>
+                        <button class="btn btn--outline btn--darkBlue">darkBlue And outline</button>
+                        <button class="btn btn--outline btn--darkGreen">darkGreen And outline</button>
+                        <button class="btn btn--outline btn--purple">purple And outline</button>
+                        <button class="btn btn--outline btn--violet">violet And outline</button>
+                        <button class="btn btn--outline btn--pink">pink And outline</button>
+                        <button class="btn btn--outline btn--teal">teal And outline</button>
+                    </div>
+                </div>    
+
+                <div class="row">
+                    <input type="checkbox" id="outline-btn-visibility__btn" class="code-visibility-toggler">
+                    <div class="col-12">
+                        <label for="outline-btn-visibility__btn" class="code-visibility__button">
+                            <i class="fa fa-code" aria-hidden="true"></i>
+                        </label>
+                    </div>
+                    <div class="col-12 code__container">
+                        <textarea class="code">
+                            <button class="btn btn--outline">Outline</button>
+                            <button class="btn btn--outline btn--primary">Primary And outline</button>
+                            <button class="btn btn--outline btn--secondary">Secondary And outline</button>
+                            <button class="btn btn--outline btn--success">success And outline</button>
+                            <button class="btn btn--outline btn--warning">warning And outline</button>
+                            <button class="btn btn--outline btn--light">light And outline</button>
+                            <button class="btn btn--outline btn--red">red And outline</button>
+                            <button class="btn btn--outline btn--darkBlue">darkBlue And outline</button>
+                            <button class="btn btn--outline btn--darkGreen">darkGreen And outline</button>
+                            <button class="btn btn--outline btn--purple">purple And outline</button>
+                            <button class="btn btn--outline btn--violet">violet And outline</button>
+                            <button class="btn btn--outline btn--pink">pink And outline</button>
+                            <button class="btn btn--outline btn--teal">teal And outline</button>
+                        </textarea>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <h3 class="h3 inverted-buttons-container__h3">Inverted Buttons</h3>
+                        <br>
+                        <div class="inverted-buttons-container">
+                            <button class="btn btn--inverted">Inverted</button>
+                            <button class="btn btn--inverted btn--primary">Inverted and primary</button>
+                            <button class="btn btn--inverted btn--secondary">Inverted and secondary</button>
+                            <button class="btn btn--inverted btn--success">Inverted and success</button>
+                            <button class="btn btn--inverted btn--warning">Inverted and warning</button>
+                            <button class="btn btn--inverted btn--light">Inverted and light</button>
+                            <button class="btn btn--inverted btn--red">Inverted and red</button>
+                            <button class="btn btn--inverted btn--darkBlue">Inverted and darkBlue</button>
+                            <button class="btn btn--inverted btn--darkGreen">Inverted and darkGreen</button>
+                            <button class="btn btn--inverted btn--violet">Inverted and violet</button>
+                            <button class="btn btn--inverted btn--pink">Inverted and pink</button>
+                            <button class="btn btn--inverted btn--teal">Inverted and teal</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <input type="checkbox" id="inverted-btn-visibility__btn" class="code-visibility-toggler">
+                    <div class="col-12">
+                        <label for="inverted-btn-visibility__btn" class="code-visibility__button">
+                            <i class="fa fa-code" aria-hidden="true"></i>
+                        </label>
+                    </div>
+                    <div class="col-12 code__container">
+                        <textarea class="code">
+                            <button class="btn btn--inverted">Inverted</button>
+                            <button class="btn btn--inverted btn--primary">Inverted and primary</button>
+                            <button class="btn btn--inverted btn--secondary">Inverted and secondary</button>
+                            <button class="btn btn--inverted btn--success">Inverted and success</button>
+                            <button class="btn btn--inverted btn--warning">Inverted and warning</button>
+                            <button class="btn btn--inverted btn--light">Inverted and light</button>
+                            <button class="btn btn--inverted btn--red">Inverted and red</button>
+                            <button class="btn btn--inverted btn--darkBlue">Inverted and darkBlue</button>
+                            <button class="btn btn--inverted btn--darkGreen">Inverted and darkGreen</button>
+                            <button class="btn btn--inverted btn--violet">Inverted and violet</button>
+                            <button class="btn btn--inverted btn--pink">Inverted and pink</button>
+                            <button class="btn btn--inverted btn--teal">Inverted and teal</button>
+                        </textarea>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-12">
+                        <h3 class="h3 inverted-buttons-container__h3">Inverted and outline Buttons</h3>
+                        <br>
+                        <div class="inverted-buttons-container">
+                            <button class="btn btn--inverted btn--outline">Inverted and outline</button>
+                            <button class="btn btn--inverted btn--primary btn--outline">Inverted, outline and primary</button>
+                            <button class="btn btn--inverted btn--secondary btn--outline">Inverted, outline and secondary</button>
+                            <button class="btn btn--inverted btn--success btn--outline">Inverted, outline and success</button>
+                            <button class="btn btn--inverted btn--warning btn--outline">Inverted, outline and warning</button>
+                            <button class="btn btn--inverted btn--light btn--outline">Inverted, outline and light</button>
+                            <button class="btn btn--inverted btn--red btn--outline">Inverted, outline and red</button>
+                            <button class="btn btn--inverted btn--darkBlue btn--outline">Inverted, outline and darkBlue</button>
+                            <button class="btn btn--inverted btn--darkGreen btn--outline">Inverted, outline and darkGreen</button>
+                            <button class="btn btn--inverted btn--violet btn--outline">Inverted, outline and violet</button>
+                            <button class="btn btn--inverted btn--pink btn--outline">Inverted, outline and pink</button>
+                            <button class="btn btn--inverted btn--teal btn--outline">Inverted, outline and teal</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <input type="checkbox" id="inverted-outline-btn-visibility__btn" class="code-visibility-toggler">
+                    <div class="col-12">
+                        <label for="inverted-outline-btn-visibility__btn" class="code-visibility__button">
+                            <i class="fa fa-code" aria-hidden="true"></i>
+                        </label>
+                    </div>
+                    <div class="col-12 code__container">
+                        <textarea class="code">
+                            <button class="btn btn--inverted btn--outline">Inverted and outline</button>
+                            <button class="btn btn--inverted btn--primary btn--outline">Inverted, outline and primary</button>
+                            <button class="btn btn--inverted btn--secondary btn--outline">Inverted, outline and secondary</button>
+                            <button class="btn btn--inverted btn--success btn--outline">Inverted, outline and success</button>
+                            <button class="btn btn--inverted btn--warning btn--outline">Inverted, outline and warning</button>
+                            <button class="btn btn--inverted btn--light btn--outline">Inverted, outline and light</button>
+                            <button class="btn btn--inverted btn--red btn--outline">Inverted, outline and red</button>
+                            <button class="btn btn--inverted btn--darkBlue btn--outline">Inverted, outline and darkBlue</button>
+                            <button class="btn btn--inverted btn--darkGreen btn--outline">Inverted, outline and darkGreen</button>
+                            <button class="btn btn--inverted btn--violet btn--outline">Inverted, outline and violet</button>
+                            <button class="btn btn--inverted btn--pink btn--outline">Inverted, outline and pink</button>
+                            <button class="btn btn--inverted btn--teal btn--outline">Inverted, outline and teal</button>
+                        </textarea>
+                    </div>
+                </div>
+
+                    <!-- <div class="col-12">
+                        <h3>Focusable</h3>
+                        <br>
+                        <button class="btn btn--focusable">Focusable</button>
+                        <button class="btn btn--primary btn--focusable">Focusable</button>
+                        <button class="btn btn--outline btn--primary btn--focusable">Focusable</button>
+                    </div> -->
+
+            </section>
+
+            <section class="docs__section" id="badge-and-pill">
+                <h2 class="h2"><a href="#badge-and-pill">Badge and Pill</a></h2>
+                <div>
+
+                </div>
+            </section>
+
+            <section class="docs__section" id="avatar">
+                <h2 class="h2"><a href="#avatar">Avatar</a></h2>
+                <div class="row">
+                    <div class="col-2">
+                        <div class="avatar">
+                            <img src="./assets/avatar1.png" alt="" class="avatar__img">
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="avatar avatar--round">
+                            <img src="./assets/avatar2.png" alt="" class="avatar__img">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="docs__section" id="text-input">
+                <h2 class="h2"><a href="#text-input">Text Input</a></h2>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="segment">
+                            <h3>Standard Input</h3>
+
+                            <br>
+                            <div class="input">
+                                <input type="text" placeholder="Enter text">
+                            </div>    
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <input type="checkbox" id="standard-input-visibility__btn" class="code-visibility-toggler">
+                    <div class="col-12">
+                        <label for="standard-input-visibility__btn" class="code-visibility__button">
+                            <i class="fa fa-code" aria-hidden="true"></i>
+                        </label>
+                    </div>
+                    <div class="col-12 code__container">
+                        <textarea class="code">
+                            <div class="input">
+                                <input type="text" placeholder="Enter text">
+                            </div> 
+                        </textarea>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="segment">
+                            <h3>Interacting Input</h3>
+                            <p class="text--lead">An input field can show a user is currently interacting with it</p>
+                            <br>
+                            <div class="input focus">
+                                <input type="text" placeholder="Enter text">
+                            </div>    
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="row">
+                    <input type="checkbox" id="interacting-input-visibility__btn" class="code-visibility-toggler">
+                    <div class="col-12">
+                        <label for="interacting-input-visibility__btn" class="code-visibility__button">
+                            <i class="fa fa-code" aria-hidden="true"></i>
+                        </label>
+                    </div>
+                    <div class="col-12 code__container">
+                        <textarea class="code">
+                            <div class="input focus">
+                                <input type="text" placeholder="Enter text">
+                            </div> 
+                        </textarea>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="segment">
+                            <h3>Disabled</h3>
+                            <p class="text--lead">An input field can show that it is disabled</p>
+                            <br>
+                            <div class="input disabled">
+                                <input type="text" placeholder="Enter text" tabindex="-1">
+                            </div>
+                            <br>
+                            <br>
+                            <div class="input input--icon disabled">
+                                <input type="text" placeholder="Enter text" tabindex="-1">
+                                <i class="fa fa-search"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="row">
+                    <input type="checkbox" id="disabled-input-visibility__btn" class="code-visibility-toggler">
+                    <div class="col-12">
+                        <label for="disabled-input-visibility__btn" class="code-visibility__button">
+                            <i class="fa fa-code" aria-hidden="true"></i>
+                        </label>
+                    </div>
+                    <div class="col-12 code__container">
+                        <textarea class="code">
+                            <div class="input disabled">
+                                <input type="text" placeholder="Enter text" tabindex="-1">
+                            </div>
+                            <div class="input input--icon disabled">
+                                <input type="text" placeholder="Enter text" tabindex="-1">
+                                <i class="fa fa-search"></i>
+                            </div>
+                        </textarea>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="segment">
+                            <h3>Error</h3>
+                            <p class="text--lead">An input field can show a user if some validation error is present.</p>
+                            <br>
+                            <div class="input error">
+                                <input type="text" placeholder="Enter text">
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="row">
+                    <input type="checkbox" id="error-input-visibility__btn" class="code-visibility-toggler">
+                    <div class="col-12">
+                        <label for="error-input-visibility__btn" class="code-visibility__button">
+                            <i class="fa fa-code" aria-hidden="true"></i>
+                        </label>
+                    </div>
+                    <div class="col-12 code__container">
+                        <textarea class="code">
+                            <div class="input error">
+                                <input type="text" placeholder="Enter text">
+                            </div> 
+                        </textarea>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="segment">
+                            <h3>Icon</h3>
+                            <p class="text--lead"> An input can be formatted with an icon</p>
+                            <br>
+                            <div class="input input--icon">
+                                <input type="text" placeholder="Enter text">
+                                <i class="fa fa-search"></i>
+                            </div>
+                            <br>
+                            <br>
+                            <div class="input input--icon">
+                                <i class="fa fa-search"></i>
+                                <input type="text" placeholder="Enter text">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="row">
+                    <input type="checkbox" id="icon-input-visibility__btn" class="code-visibility-toggler">
+                    <div class="col-12">
+                        <label for="icon-input-visibility__btn" class="code-visibility__button">
+                            <i class="fa fa-code" aria-hidden="true"></i>
+                        </label>
+                    </div>
+                    <div class="col-12 code__container">
+                        <textarea class="code">
+                            <div class="input input--icon">
+                                <input type="text" placeholder="Enter text">
+                                <i class="fa fa-search"></i>
+                            </div>
+                            <div class="input input--icon">
+                                <i class="fa fa-search"></i>
+                                <input type="text" placeholder="Enter text">
+                            </div>
+                        </textarea>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="segment">
+                            <h3>Labeled</h3>
+                            <p class="text--lead">An input can be formatted with a label</p>
+                            <br>
+                            <div class="input input--label">
+                                <div class="input__label input__label--prepend">http://</div>
+                                <input type="text" placeholder="Enter text">
+                            </div>
+
+                            <br>
+                            <br>
+                
+                            <div class="input input--label">
+                                <input type="text" placeholder="Enter text">
+                                <div class="input__label input__label--append">.com</div>
+                            </div>
+                            
+                            <br>
+                            <br>
+                
+                            <div class="input input--label error">
+                                <input type="text" placeholder="Enter text">
+                                <div class="input__label input__label--append">kg</div>
+                            </div>
+
+                            <br>
+                            <br>
+                
+                            <div class="input input--label">
+                                <div class="input__label input__label--prepend input__label--basic">http://</div>
+                                <input type="text" placeholder="Enter text">
+                            </div>
+
+                            <br>
+                            <br>
+                
+                            <div class="input input--label">
+                                <input type="text" placeholder="Enter text">
+                                <div class="input__label input__label--append input__label--basic">.com</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="row">
+                    <input type="checkbox" id="labelled-input-visibility__btn" class="code-visibility-toggler">
+                    <div class="col-12">
+                        <label for="labelled-input-visibility__btn" class="code-visibility__button">
+                            <i class="fa fa-code" aria-hidden="true"></i>
+                        </label>
+                    </div>
+                    <div class="col-12 code__container">
+                        <textarea class="code">
+                            <div class="input input--label">
+                                <div class="input__label input__label--prepend">http://</div>
+                                <input type="text" placeholder="Enter text">
+                            </div>
+                            <div class="input input--label">
+                                <input type="text" placeholder="Enter text">
+                                <div class="input__label input__label--append">.com</div>
+                            </div>
+                            <div class="input input--label error">
+                                <input type="text" placeholder="Enter text">
+                                <div class="input__label input__label--append">kg</div>
+                            </div>
+                           <div class="input input--label">
+                                <div class="input__label input__label--prepend input__label--basic">http://</div>
+                                <input type="text" placeholder="Enter text">
+                            </div>
+                            <div class="input input--label">
+                                <input type="text" placeholder="Enter text">
+                                <div class="input__label input__label--append input__label--basic">.com</div>
+                            </div>
+                        </textarea>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="segment">
+                            <h3>Transparent</h3>
+                            <p class="text--lead">A transparent input has no background</p>
+                            <br>
+                            <div class="input input--transparent">
+                                <input type="text" placeholder="Search">
+                            </div>
+
+                            <br><br>
+
+                            <div class="input input--label input--transparent">
+                                <div class="input__label input__label--prepend input__label--basic">http://</div>
+                                <input type="text" placeholder="Enter text">
+                            </div>
+
+                            <br><br>
+                
+                            <div class="input input--label input--transparent">
+                                <input type="text" placeholder="Enter text">
+                                <div class="input__label input__label--append input__label--basic">.com</div>
+                            </div>
+
+                            <br><br>
+
+                            <div class="input input--label input--transparent">
+                                <div class="input__label input__label--prepend">http://</div>
+                                <input type="text" placeholder="Enter text">
+                            </div>
+
+                            <br><br>
+                
+                            <div class="input input--label input--transparent">
+                                <input type="text" placeholder="Enter text">
+                                <div class="input__label input__label--append">.com</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="row">
+                    <input type="checkbox" id="transparent-input-visibility__btn" class="code-visibility-toggler">
+                    <div class="col-12">
+                        <label for="transparent-input-visibility__btn" class="code-visibility__button">
+                            <i class="fa fa-code" aria-hidden="true"></i>
+                        </label>
+                    </div>
+                    <div class="col-12 code__container">
+                        <textarea class="code">
+                            <div class="input input--transparent">
+                                <input type="text" placeholder="Search">
+                            </div>
+                            <div class="input input--label input--transparent">
+                                <div class="input__label input__label--prepend input__label--basic">http://</div>
+                                <input type="text" placeholder="Enter text">
+                            </div>
+                            <div class="input input--label input--transparent">
+                                <input type="text" placeholder="Enter text">
+                                <div class="input__label input__label--append input__label--basic">.com</div>
+                            </div>
+                            <div class="input input--label input--transparent">
+                                <div class="input__label input__label--prepend">http://</div>
+                                <input type="text" placeholder="Enter text">
+                            </div>
+                            <div class="input input--label input--transparent">
+                                <input type="text" placeholder="Enter text">
+                                <div class="input__label input__label--append">.com</div>
+                            </div>
+                        </textarea>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="segment">
+                            <h3>Inverted</h3>
+                            <p class="text--lead">An input can be formatted to appear on dark backgrounds</p>
+                            <br>
+                            <div class="row" style="background: var(--color-black);">
+
+                                <div class="col-12">
+                                    <div class="input">
+                                        <input type="text" placeholder="Search">
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="input input--label">
+                                        <input type="text" placeholder="Enter text">
+                                        <div class="input__label input__label--append">.com</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-12">
+                                    <div class="input input--label input--inverted">
+                                        <div class="input__label input__label--prepend input__label--basic">http://</div>
+                                        <input type="text" placeholder="Enter text">
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="input input--label input--inverted">
+                                        <input type="text" placeholder="Enter text">
+                                        <div class="input__label input__label--append input__label--basic">.com</div>
+                                    </div>    
+                                </div>
+                                
+                                <div class="col-12">
+                                    <div class="input input--label input--inverted">
+                                        <div class="input__label input__label--prepend">http://</div>
+                                        <input type="text" placeholder="Enter text">
+                                    </div>
+                                </div>        
+                                
+                                <div class="col-12">
+                                    <div class="input input--label input--inverted">
+                                        <input type="text" placeholder="Enter text">
+                                        <div class="input__label input__label--append">.com</div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="row">
+                    <input type="checkbox" id="inverted-input-visibility__btn" class="code-visibility-toggler">
+                    <div class="col-12">
+                        <label for="inverted-input-visibility__btn" class="code-visibility__button">
+                            <i class="fa fa-code" aria-hidden="true"></i>
+                        </label>
+                    </div>
+                    <div class="col-12 code__container">
+                        <textarea class="code">
+                            <div class="input">
+                                <input type="text" placeholder="Search">
+                            </div>
+
+                            <div class="input input--label">
+                                <input type="text" placeholder="Enter text">
+                                <div class="input__label input__label--append">.com</div>
+                            </div>
+                            
+                            <div class="input input--label input--inverted">
+                                <div class="input__label input__label--prepend input__label--basic">http://</div>
+                                <input type="text" placeholder="Enter text">
+                            </div>
+
+                            <div class="input input--label input--inverted">
+                                <input type="text" placeholder="Enter text">
+                                <div class="input__label input__label--append input__label--basic">.com</div>
+                            </div>    
+                            
+                            <div class="input input--label input--inverted">
+                                <div class="input__label input__label--prepend">http://</div>
+                                <input type="text" placeholder="Enter text">
+                            </div>
+                            
+                            <div class="input input--label input--inverted">
+                                <input type="text" placeholder="Enter text">
+                                <div class="input__label input__label--append">.com</div>
+                            </div>
+                        </textarea>
+                    </div>
+                </div>
+
+                
+                <div class="row">
+                    <div class="col-12">
+                        <div class="segment">
+                            <h3>Fluid</h3>
+                            <p class="text--lead">An input can take the size of its container</p>
+                            <br>
+                            <div class="input input--fluid">
+                                <input type="text" placeholder="Enter text">
+                            </div>
+
+                            <br><br>
+
+                            <div class="input input--fluid input--icon">
+                                <i class="fa fa-search"></i>
+                                <input type="text" placeholder="Enter text">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="row">
+                    <input type="checkbox" id="fluid-input-visibility__btn" class="code-visibility-toggler">
+                    <div class="col-12">
+                        <label for="fluid-input-visibility__btn" class="code-visibility__button">
+                            <i class="fa fa-code" aria-hidden="true"></i>
+                        </label>
+                    </div>
+                    <div class="col-12 code__container">
+                        <textarea class="code">
+                            <div class="input input--fluid">
+                                <input type="text" placeholder="Enter text">
+                            </div>
+
+                            <div class="input input--fluid input--icon">
+                                <i class="fa fa-search"></i>
+                                <input type="text" placeholder="Enter text">
+                            </div>
+                        </textarea>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="segment">
+                            <h3>Size</h3>
+                            <p class="text--lead"> An input can vary in size</p>
+                            <br>
+                            <div class="input input--small input--icon">
+                                <i class="fa fa-search"></i>
+                                <input type="text" placeholder="Enter text">
+                            </div>
+
+                            <br><br>
+                            
+                            <div class="input input--medium input--icon">
+                                <i class="fa fa-search"></i>
+                                <input type="text" placeholder="Enter text">
+                            </div>
+                
+                            <br><br>
+
+                            <div class="input input--large input--icon">
+                                <i class="fa fa-search"></i>
+                                <input type="text" placeholder="Enter text">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="row">
+                    <input type="checkbox" id="size-input-visibility__btn" class="code-visibility-toggler">
+                    <div class="col-12">
+                        <label for="size-input-visibility__btn" class="code-visibility__button">
+                            <i class="fa fa-code" aria-hidden="true"></i>
+                        </label>
+                    </div>
+                    <div class="col-12 code__container">
+                        <textarea class="code">
+                            <div class="input input--small input--icon">
+                                <i class="fa fa-search"></i>
+                                <input type="text" placeholder="Enter text">
+                            </div>
+
+                            <br><br>
+                            
+                            <div class="input input--medium input--icon">
+                                <i class="fa fa-search"></i>
+                                <input type="text" placeholder="Enter text">
+                            </div>
+                
+                            <br><br>
+
+                            <div class="input input--large input--icon">
+                                <i class="fa fa-search"></i>
+                                <input type="text" placeholder="Enter text">
+                            </div>
+                        </textarea>
+                    </div>
+                </div>
+
+                <!-- <div class="input">
+                        <input type="email" placeholder="Enter text">
+                    </div>
+        
+                    <div class="input">
+                        <input type="password" placeholder="Enter text">
+                    </div>
+        
+                    <div class="input">
+                        <input type="datetime" placeholder="Enter text">
+                    </div> -->
+
+            </section>
+
+            <section class="docs__section" id="text-area">
+                <h2 class="h2"><a href="#text-area">Text Area</a></h2>
+                <div>
+
+                </div>
+            </section>
+
+            <section class="docs__section" id="file-picker">
+                <h2 class="h2"><a href="#file-picker">File Picker</a></h2>
+                <div>
+
+                </div>
+            </section>
+           
+            <section class="docs__section" id="search-input">
+                <h2 class="h2"><a href="#search-input">Search Input</a></h2>
+                <div>
+
+                </div>
+            </section>
+
+            <section class="docs__section" id="select">
+                <h2 class="h2"><a href="#select">Select</a></h2>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="custom-dropdown">
+                            <select class="custom-dropdown__menu">
+                                <option value="">Something 1</option>
+                                <option value="">Something 2</option>
+                                <option value="">Something 3</option>
+                                <option value="">Something 4</option>
+                                <option value="">Something 5</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="col-12">
+                        <div class="custom-dropdown custom-dropdown--medium">
+                            <select class="custom-dropdown__menu">
+                                <option value="" >Something 1</option>
+                                <option value="" >Something 2</option>
+                                <option value="" >Something 3</option>
+                                <option value="" >Something 4</option>
+                                <option value="" >Something 5</option>
+                            </select>
+                        </div>
+                    </div>
+        
+                    <div class="col-12">
+                        <div class="custom-dropdown custom-dropdown--large">
+                            <select class="custom-dropdown__menu">
+                                <option value="" >Something 1</option>
+                                <option value="" >Something 2</option>
+                                <option value="" >Something 3</option>
+                                <option value="" >Something 4</option>
+                                <option value="" >Something 5</option>
+                            </select>
+                        </div>    
+                    </div>
+                </div>
+               
+                <div class="row">
+                    <input type="checkbox" id="select-visibility__btn" class="code-visibility-toggler">
+                    <div class="col-12">
+                        <label for="select-visibility__btn" class="code-visibility__button">
+                            <i class="fa fa-code" aria-hidden="true"></i>
+                        </label>
+                    </div>
+                    <div class="col-12 code__container">
+                        <textarea class="code">
+                            <div class="custom-dropdown">
+                                <select class="custom-dropdown__menu">
+                                    <option value="">Something 1</option>
+                                    <option value="">Something 2</option>
+                                    <option value="">Something 3</option>
+                                    <option value="">Something 4</option>
+                                    <option value="">Something 5</option>
+                                </select>
+                            </div>
+
+                            <div class="custom-dropdown custom-dropdown--medium">
+                                <select class="custom-dropdown__menu">
+                                    <option value="" >Something 1</option>
+                                    <option value="" >Something 2</option>
+                                    <option value="" >Something 3</option>
+                                    <option value="" >Something 4</option>
+                                    <option value="" >Something 5</option>
+                                </select>
+                            </div>
+
+                            <div class="custom-dropdown custom-dropdown--large">
+                                <select class="custom-dropdown__menu">
+                                    <option value="" >Something 1</option>
+                                    <option value="" >Something 2</option>
+                                    <option value="" >Something 3</option>
+                                    <option value="" >Something 4</option>
+                                    <option value="" >Something 5</option>
+                                </select>
+                            </div> 
+
+                        </textarea>
+                    </div>
+                </div>        
+
+            </section>
+
+            <section class="docs__section" id="select-menu">
+                <h2 class="h2"><a href="#select-menu">Select Menu</a></h2>
+                <div class="row">
+                    <div class="col-3 col-xl-3 col-lg-4 col-md-6 col-sm-10">
+                        <div class="dropdown" tabindex="0">
+                            <button class="dropdown__toggle btn" type="button">DropDown Button</button>
+                            <div class="dropdown__menu">
+                                <a href="#" class="dropdown__item">Something 1</a>
+                                <a href="#" class="dropdown__item">Something 2 </a>
+                                <a href="#" class="dropdown__item">Something 3</a>
+                                <div class="dropdown__divider"></div>
+                                <a href="#" class="dropdown__item">Something else here</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-3 col-xl-3 col-lg-4 col-md-6 col-sm-10">
+                        <div class="dropdown" tabindex="0">
+                            <button class="dropdown__toggle btn btn--primary" type="button">DropDown Button</button>
+                            <div class="dropdown__menu">
+                                <a href="#" class="dropdown__item">Something 1</a>
+                                <a href="#" class="dropdown__item">Something 2 </a>
+                                <a href="#" class="dropdown__item">Something 3</a>
+                                <div class="dropdown__divider"></div>
+                                <a href="#" class="dropdown__item">Something else here</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-3 col-xl-3 col-lg-4 col-md-6 col-sm-10">
+                        <div class="dropdown"  tabindex="0">
+                            <button class="dropdown__toggle btn btn--secondary" type="button">DropDown Button</button>
+                            <div class="dropdown__menu">
+                                <a href="#" class="dropdown__item">Something 1</a>
+                                <a href="#" class="dropdown__item">Something 2 </a>
+                                <a href="#" class="dropdown__item">Something 3</a>
+                                <div class="dropdown__divider"></div>
+                                <a href="#" class="dropdown__item">Something else here</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-3 col-xl-3 col-lg-4 col-md-6 col-sm-10">
+                        <div class="dropdown" tabindex="0">
+                            <button class="dropdown__toggle btn btn--primary btn--outline" type="button">DropDown Button</button>
+                            <div class="dropdown__menu">
+                                <a href="#" class="dropdown__item">Something 1</a>
+                                <a href="#" class="dropdown__item">Something 2 </a>
+                                <a href="#" class="dropdown__item">Something 3</a>
+                                <div class="dropdown__divider"></div>
+                                <a href="#" class="dropdown__item">Something else here</a>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="col-3 col-xl-3 col-lg-4 col-md-6 col-sm-10">
+                        <div class="dropdown" tabindex="0">
+                            <button class="dropdown__toggle btn btn--primary btn--inverted" type="button">DropDown Button</button>
+                            <div class="dropdown__menu">
+                                <a href="#" class="dropdown__item">Something 1</a>
+                                <a href="#" class="dropdown__item">Something 2 </a>
+                                <a href="#" class="dropdown__item">Something 3</a>
+                                <div class="dropdown__divider"></div>
+                                <a href="#" class="dropdown__item">Something else here</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>   
+
+                <div class="row">
+                    <input type="checkbox" id="select-menu-visibility__btn" class="code-visibility-toggler">
+                    <div class="col-12">
+                        <label for="select-menu-visibility__btn" class="code-visibility__button">
+                            <i class="fa fa-code" aria-hidden="true"></i>
+                        </label>
+                    </div>
+                    <div class="col-12 code__container">
+                        <textarea class="code">
+                            <div class="dropdown" tabindex="0">
+                                <button class="dropdown__toggle btn" type="button">DropDown Button</button>
+                                <div class="dropdown__menu">
+                                    <a href="#" class="dropdown__item">Something 1</a>
+                                    <a href="#" class="dropdown__item">Something 2 </a>
+                                    <a href="#" class="dropdown__item">Something 3</a>
+                                    <div class="dropdown__divider"></div>
+                                    <a href="#" class="dropdown__item">Something else here</a>
+                                </div>
+                            </div>
+                        </textarea>
+                    </div>
+                </div>        
+
+                <div class="row">
+
+                    <div class="col-3 col-xl-3 col-lg-4 col-md-6 col-sm-10">
+                        <div class="dropdown dropdown--right"  tabindex="0">
+                            <button class="dropdown__toggle btn btn--secondary" type="button">DropDown Button</button>
+                            <div class="dropdown__menu">
+                                <a href="#" class="dropdown__item">Something 1</a>
+                                <a href="#" class="dropdown__item">Something 2 </a>
+                                <a href="#" class="dropdown__item">Something 3</a>
+                                <div class="dropdown__divider"></div>
+                                <a href="#" class="dropdown__item">Something else here</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                </div>
+
+                <div class="row">
+                    <input type="checkbox" id="select-menu-right-visibility__btn" class="code-visibility-toggler">
+                    <div class="col-12">
+                        <label for="select-menu-right-visibility__btn" class="code-visibility__button">
+                            <i class="fa fa-code" aria-hidden="true"></i>
+                        </label>
+                    </div>
+                    <div class="col-12 code__container">
+                        <textarea class="code">
+                            <div class="dropdown dropdown--right"  tabindex="0">
+                                <button class="dropdown__toggle btn btn--secondary" type="button">DropDown Button</button>
+                                <div class="dropdown__menu">
+                                    <a href="#" class="dropdown__item">Something 1</a>
+                                    <a href="#" class="dropdown__item">Something 2 </a>
+                                    <a href="#" class="dropdown__item">Something 3</a>
+                                    <div class="dropdown__divider"></div>
+                                    <a href="#" class="dropdown__item">Something else here</a>
+                                </div>
+                            </div>
+                        </textarea>
+                    </div>
+                </div>      
+                    
+            </section>
+
+            <section class="docs__section" id="navbar">
+                <h2 class="h2"><a href="#navbar">Navbar</a></h2>
+                <div class="row">
+
+                    <div class="col-12 m-0 p-0">
+                        <nav class="nav">
+                            <a href="#" class="nav__title">Brand</a>
+                            <input type="checkbox" id="nav__toggler1" class="nav__toggler">
+                            <label for="nav__toggler1" class="nav__toggler--button">
+                                <i class="fa fa-bars" aria-hidden="true"></i>
+                            </label>
+                            <div class="nav__content">
+                                <ul class="nav__list">
+                                    <li class="nav__item active">
+                                        <a href="" class="nav__link">Home</a>   
+                                    </li>
+                                    <li class="nav__item">
+                                        <a href="" class="nav__link">Link</a>
+                                    </li>
+                                    <li class="nav__item dropdown" tabindex="0">
+                                            <button class="dropdown__toggle btn" type="button">DropDown</button>
+                                            <div class="dropdown__menu">
+                                                <a href="#" class="dropdown__item">Something 1</a>
+                                                <a href="#" class="dropdown__item">Something 2 </a>
+                                                <a href="#" class="dropdown__item">Something 3</a>
+                                                <div class="dropdown__divider"></div>
+                                                <a href="#" class="dropdown__item">Something else here</a>
+                                            </div>
+                                    </li>
+                                    <li class="nav__item disabled">
+                                        <a href="" class="nav__link">Disabled</a>
+                                    </li>
+                                </ul>
+            
+                                <ul class="nav__list">
+                                    <form action="" class="nav__form">
+                                        <div class="input input--small">
+                                            <input type="text" placeholder="Search">
+                                        </div>            
+                                        <button type="button" class="btn btn--success btn--inverted">Search</button>
+                                    </form>
+                                </ul>
+                                
+                            </div>
+                        </nav>
+                    </div>
+                    
+                    <div class="col-12 m-0 p-0">
+                        <nav class="nav bg-blue text-white nav--dark">
+                            <a href="#" class="nav__title">Brand</a>
+                            <input type="checkbox" id="nav__toggler2"  class="nav__toggler">
+                            <label for="nav__toggler2" class="nav__toggler--button">
+                                <i class="fa fa-bars" aria-hidden="true"></i>
+                            </label>
+                            <div class="nav__content">
+                                <ul class="nav__list">
+                                    <li class="nav__item active">
+                                        <a href="" class="nav__link">Home</a>   
+                                    </li>
+                                    <li class="nav__item">
+                                        <a href="" class="nav__link">Link</a>
+                                    </li>
+                                    <li class="nav__item dropdown" tabindex="0">
+                                            <button class="dropdown__toggle btn" type="button">DropDown</button>
+                                            <div class="dropdown__menu">
+                                                <a href="#" class="dropdown__item">Something 1</a>
+                                                <a href="#" class="dropdown__item">Something 2 </a>
+                                                <a href="#" class="dropdown__item">Something 3</a>
+                                                <div class="dropdown__divider"></div>
+                                                <a href="#" class="dropdown__item">Something else here</a>
+                                            </div>
+                                    </li>
+                                    <li class="nav__item disabled">
+                                        <a href="" class="nav__link">Disabled</a>
+                                    </li>
+                                </ul>
+            
+                                <ul class="nav__list">
+                                    <form action="" class="nav__form">
+                                        <div class="input input--small">
+                                            <input type="text" placeholder="Search">
+                                        </div>            
+                                        <button type="button" class="btn btn--success btn--inverted">Search</button>
+                                    </form>
+                                    <!-- <li class="nav__item">
+                                        <a href="" class="nav__link">Link</a>
+                                    </li> -->
+                                </ul>
+            
+                                
+                            </div>
+                        </nav>
+                    </div>
+        
+                    <div class="col-12 m-0 p-0">
+                        <nav class="nav bg-black text-white nav--dark">
+                            <a href="#" class="nav__title">Brand</a>
+                            <input type="checkbox" name="" id="nav__toggler3"  class="nav__toggler">
+                            <label for="nav__toggler3" class="nav__toggler--button">
+                                <i class="fa fa-bars" aria-hidden="true"></i>
+                            </label>
+                            <div class="nav__content">
+                                <ul class="nav__list">
+                                    <li class="nav__item active">
+                                        <a href="" class="nav__link">Home</a>   
+                                    </li>
+                                    <li class="nav__item">
+                                        <a href="" class="nav__link">Link</a>
+                                    </li>
+                                    <li class="nav__item dropdown" tabindex="0">
+                                            <button class="dropdown__toggle btn" type="button">DropDown</button>
+                                            <div class="dropdown__menu">
+                                                <a href="#" class="dropdown__item">Something 1</a>
+                                                <a href="#" class="dropdown__item">Something 2 </a>
+                                                <a href="#" class="dropdown__item">Something 3</a>
+                                                <div class="dropdown__divider"></div>
+                                                <a href="#" class="dropdown__item">Something else here</a>
+                                            </div>
+                                    </li>
+                                    <li class="nav__item disabled">
+                                        <a href="" class="nav__link">Disabled</a>
+                                    </li>
+                                </ul>
+            
+                                <form action="" class="nav__form">
+                                    <div class="input input--small">
+                                        <input type="text" placeholder="Search">
+                                    </div>            
+                                    <button type="button" class="btn btn--success btn--inverted">Search</button>
+                                </form>
+                            </div>
+                        </nav>
+                    </div>
+                    
+                    <div class="col-12 m-0 p-0">
+
+                        <nav class="nav bg-light-green bg--dark">
+                            <a href="#" class="nav__title">Brand</a>
+                            <input type="checkbox" id="nav__toggler4"  class="nav__toggler">
+                            <label for="nav__toggler4" class="nav__toggler--button">
+                                <i class="fa fa-bars" aria-hidden="true"></i>
+                            </label>
+                            <div class="nav__content">
+                                <ul class="nav__list">
+                                    <li class="nav__item active">
+                                        <a href="" class="nav__link">Home</a>   
+                                    </li>
+                                    <li class="nav__item">
+                                        <a href="" class="nav__link">Link</a>
+                                    </li>
+                                    <li class="nav__item dropdown" tabindex="0">
+                                            <button class="dropdown__toggle btn" type="button">DropDown</button>
+                                            <div class="dropdown__menu">
+                                                <a href="#" class="dropdown__item">Something 1</a>
+                                                <a href="#" class="dropdown__item">Something 2 </a>
+                                                <a href="#" class="dropdown__item">Something 3</a>
+                                                <div class="dropdown__divider"></div>
+                                                <a href="#" class="dropdown__item">Something else here</a>
+                                            </div>
+                                    </li>
+                                    <li class="nav__item disabled">
+                                        <a href="" class="nav__link">Disabled</a>
+                                    </li>
+                                </ul>
+            
+                                <form action="" class="nav__form">
+                                    <div class="input input--small">
+                                        <input type="text" placeholder="Search">
+                                    </div>            
+                                    <button type="button" class="btn btn--success btn--inverted">Search</button>
+                                </form>
+                            </div>
+                        </nav>
+                    </div>
+
+                </div>
+            </section>
+
+            <section class="docs__section" id="checkbox">
+                <h2 class="h2"><a href="#checkbox">Checkbox</a></h2>
+                <div>
+
+                </div>
+            </section>
+
+            <section class="docs__section" id="radio">
+                <h2 class="h2"><a href="#radio">Radio</a></h2>
+                <div>
+
+                </div>
+            </section>
+
+            <section class="docs__section" id="rating">
+                <h2 class="h2"><a href="#rating">Rating</a></h2>
+                <div class="row">
+
+                    <div class="rating__container rating--heart col-3 col-lg-4 col-md-6">
+                        <label class="rating__control" for="rating1"></label>
+                        <input class="rating__input" type="radio" name="rating" id="rating1">
+        
+                        <label class="rating__control" for="rating2"></label>                
+                        <input class="rating__input" type="radio" name="rating" id="rating2">
+                        
+                        <label class="rating__control" for="rating3"></label>
+                        <input class="rating__input" type="radio" name="rating" id="rating3">
+                        
+                        <label class="rating__control" for="rating4"></label>
+                        <input class="rating__input" type="radio" name="rating" id="rating4" checked>
+        
+                        <label class="rating__control" for="rating5"></label>
+                         <input class="rating__input" type="radio" name="rating" id="rating5">
+                    </div>
+
+                    <div class="rating__container rating--star col-3 col-lg-4 col-md-6">
+                        <label class="rating__control" for="ratingA"></label>
+                        <input class="rating__input" type="radio" name="rating1" id="ratingA" checked>
+        
+                        <label class="rating__control" for="ratingB"></label>                
+                        <input class="rating__input" type="radio" name="rating1" id="ratingB" >
+                        
+                        <label class="rating__control" for="ratingC"></label>
+                        <input class="rating__input" type="radio" name="rating1" id="ratingC">
+                        
+                        <label class="rating__control" for="ratingD"></label>
+                        <input class="rating__input" type="radio" name="rating1" id="ratingD">
+        
+                        <label class="rating__control" for="ratingE"></label>
+                         <input class="rating__input" type="radio" name="rating1" id="ratingE">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <input type="checkbox" id="rating-visibility__btn" class="code-visibility-toggler">
+                    <div class="col-12">
+                        <label for="rating-visibility__btn" class="code-visibility__button">
+                            <i class="fa fa-code" aria-hidden="true"></i>
+                        </label>
+                    </div>
+                    <div class="col-12 code__container">
+                        <textarea class="code">
+                            <div class="rating__container rating--heart">
+                                <label class="rating__control" for="rating1"></label>
+                                <input class="rating__input" type="radio" name="rating" id="rating1">
+                
+                                <label class="rating__control" for="rating2"></label>                
+                                <input class="rating__input" type="radio" name="rating" id="rating2">
+                                
+                                <label class="rating__control" for="rating3"></label>
+                                <input class="rating__input" type="radio" name="rating" id="rating3">
+                                
+                                <label class="rating__control" for="rating4"></label>
+                                <input class="rating__input" type="radio" name="rating" id="rating4" checked>
+                
+                                <label class="rating__control" for="rating5"></label>
+                                 <input class="rating__input" type="radio" name="rating" id="rating5">
+                            </div>
+
+                            <div class="rating__container rating--star">
+                                <label class="rating__control" for="ratingA"></label>
+                                <input class="rating__input" type="radio" name="rating1" id="ratingA" checked>
+                
+                                <label class="rating__control" for="ratingB"></label>                
+                                <input class="rating__input" type="radio" name="rating1" id="ratingB" >
+                                
+                                <label class="rating__control" for="ratingC"></label>
+                                <input class="rating__input" type="radio" name="rating1" id="ratingC">
+                                
+                                <label class="rating__control" for="ratingD"></label>
+                                <input class="rating__input" type="radio" name="rating1" id="ratingD">
+                
+                                <label class="rating__control" for="ratingE"></label>
+                                 <input class="rating__input" type="radio" name="rating1" id="ratingE">
+                            </div>
+                        </textarea>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <p class="text--lead col-12"> Medium Sized Ratings</p>
+
+                    <div class="rating__container rating--heart rating--md col-4 col-lg-5 col-md-12">
+                        <label class="rating__control" for="rating-md-1"></label>
+                        <input class="rating__input" type="radio" name="rating" id="rating-md-1">
+        
+                        <label class="rating__control" for="rating-md-2"></label>                
+                        <input class="rating__input" type="radio" name="rating" id="rating-md-2">
+                        
+                        <label class="rating__control" for="rating-md-3"></label>
+                        <input class="rating__input" type="radio" name="rating" id="rating-md-3">
+                        
+                        <label class="rating__control" for="rating-md-4"></label>
+                        <input class="rating__input" type="radio" name="rating" id="rating-md-4" checked>
+        
+                        <label class="rating__control" for="rating-md-5"></label>
+                         <input class="rating__input" type="radio" name="rating" id="rating-md-5">
+                    </div>
+
+                    <div class="rating__container rating--star rating--md col-4 col-lg-5 col-md-12">
+                        <label class="rating__control" for="rating-md-A"></label>
+                        <input class="rating__input" type="radio" name="rating1" id="rating-md-A" checked>
+        
+                        <label class="rating__control" for="rating-md-B"></label>                
+                        <input class="rating__input" type="radio" name="rating1" id="rating-md-B" >
+                        
+                        <label class="rating__control" for="rating-md-C"></label>
+                        <input class="rating__input" type="radio" name="rating1" id="rating-md-C">
+                        
+                        <label class="rating__control" for="rating-md-D"></label>
+                        <input class="rating__input" type="radio" name="rating1" id="rating-md-D">
+        
+                        <label class="rating__control" for="rating-md-E"></label>
+                         <input class="rating__input" type="radio" name="rating1" id="rating-md-E">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <input type="checkbox" id="rating-md-visibility__btn" class="code-visibility-toggler">
+                    <div class="col-12">
+                        <label for="rating-md-visibility__btn" class="code-visibility__button">
+                            <i class="fa fa-code" aria-hidden="true"></i>
+                        </label>
+                    </div>
+                    <div class="col-12 code__container">
+                        <textarea class="code">
+                            <div class="rating__container rating--heart rating--md">
+                                <label class="rating__control" for="rating-md-1"></label>
+                                <input class="rating__input" type="radio" name="rating" id="rating-md-1">
+                
+                                <label class="rating__control" for="rating-md-2"></label>                
+                                <input class="rating__input" type="radio" name="rating" id="rating-md-2">
+                                
+                                <label class="rating__control" for="rating-md-3"></label>
+                                <input class="rating__input" type="radio" name="rating" id="rating-md-3">
+                                
+                                <label class="rating__control" for="rating-md-4"></label>
+                                <input class="rating__input" type="radio" name="rating" id="rating-md-4" checked>
+                
+                                <label class="rating__control" for="rating-md-5"></label>
+                                 <input class="rating__input" type="radio" name="rating" id="rating-md-5">
+                            </div>
+        
+                            <div class="rating__container rating--star rating--md">
+                                <label class="rating__control" for="rating-md-A"></label>
+                                <input class="rating__input" type="radio" name="rating1" id="rating-md-A" checked>
+                
+                                <label class="rating__control" for="rating-md-B"></label>                
+                                <input class="rating__input" type="radio" name="rating1" id="rating-md-B" >
+                                
+                                <label class="rating__control" for="rating-md-C"></label>
+                                <input class="rating__input" type="radio" name="rating1" id="rating-md-C">
+                                
+                                <label class="rating__control" for="rating-md-D"></label>
+                                <input class="rating__input" type="radio" name="rating1" id="rating-md-D">
+                
+                                <label class="rating__control" for="rating-md-E"></label>
+                                 <input class="rating__input" type="radio" name="rating1" id="rating-md-E">
+                            </div>
+                        </textarea>
+                    </div>
+                </div>
+
+
+
+                <div class="row">
+                    <p class="text--lead col-12"> large Sized Ratings</p>
+                    <div class="rating__container rating--heart rating--lg col-4 col-lg-6 col-md-12">
+                        <label class="rating__control" for="rating-lg-1"></label>
+                        <input class="rating__input" type="radio" name="rating" id="rating-lg-1">
+        
+                        <label class="rating__control" for="rating-lg-2"></label>                
+                        <input class="rating__input" type="radio" name="rating" id="rating-lg-2">
+                        
+                        <label class="rating__control" for="rating-lg-3"></label>
+                        <input class="rating__input" type="radio" name="rating" id="rating-lg-3">
+                        
+                        <label class="rating__control" for="rating-lg-4"></label>
+                        <input class="rating__input" type="radio" name="rating" id="rating-lg-4" checked>
+        
+                        <label class="rating__control" for="rating-lg-5"></label>
+                         <input class="rating__input" type="radio" name="rating" id="rating-lg-5">
+                    </div>
+
+                    <div class="rating__container rating--star rating--lg col-4 col-lg-6 col-md-12">
+                        <label class="rating__control" for="rating-lg-A"></label>
+                        <input class="rating__input" type="radio" name="rating1" id="rating-lg-A" checked>
+        
+                        <label class="rating__control" for="rating-lg-B"></label>                
+                        <input class="rating__input" type="radio" name="rating1" id="rating-lg-B" >
+                        
+                        <label class="rating__control" for="rating-lg-C"></label>
+                        <input class="rating__input" type="radio" name="rating1" id="rating-lg-C">
+                        
+                        <label class="rating__control" for="rating-lg-D"></label>
+                        <input class="rating__input" type="radio" name="rating1" id="rating-lg-D">
+        
+                        <label class="rating__control" for="rating-lg-E"></label>
+                         <input class="rating__input" type="radio" name="rating1" id="rating-lg-E">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <input type="checkbox" id="rating-lg-visibility__btn" class="code-visibility-toggler">
+                    <div class="col-12">
+                        <label for="rating-lg-visibility__btn" class="code-visibility__button">
+                            <i class="fa fa-code" aria-hidden="true"></i>
+                        </label>
+                    </div>
+                    <div class="col-12 code__container">
+                        <textarea class="code">
+                            <div class="rating__container rating--heart rating--lg">
+                                <label class="rating__control" for="rating1"></label>
+                                <input class="rating__input" type="radio" name="rating" id="rating1">
+                
+                                <label class="rating__control" for="rating2"></label>                
+                                <input class="rating__input" type="radio" name="rating" id="rating2">
+                                
+                                <label class="rating__control" for="rating3"></label>
+                                <input class="rating__input" type="radio" name="rating" id="rating3">
+                                
+                                <label class="rating__control" for="rating4"></label>
+                                <input class="rating__input" type="radio" name="rating" id="rating4" checked>
+                
+                                <label class="rating__control" for="rating5"></label>
+                                 <input class="rating__input" type="radio" name="rating" id="rating5">
+                            </div>
+
+                            <div class="rating__container rating--star rating--lg">
+                                <label class="rating__control" for="ratingA"></label>
+                                <input class="rating__input" type="radio" name="rating1" id="ratingA" checked>
+                
+                                <label class="rating__control" for="ratingB"></label>                
+                                <input class="rating__input" type="radio" name="rating1" id="ratingB" >
+                                
+                                <label class="rating__control" for="ratingC"></label>
+                                <input class="rating__input" type="radio" name="rating1" id="ratingC">
+                                
+                                <label class="rating__control" for="ratingD"></label>
+                                <input class="rating__input" type="radio" name="rating1" id="ratingD">
+                
+                                <label class="rating__control" for="ratingE"></label>
+                                 <input class="rating__input" type="radio" name="rating1" id="ratingE">
+                            </div>
+                        </textarea>
+                    </div>
+                </div>
+
+
+            </section>
+
+            <section class="docs__section" id="switch">
+                <h2 class="h2"><a href="#switch">Switch</a></h2>
+                <div>
+
+                </div>
+            </section>
+
+            <section class="docs__section" id="toaster">
+                <h2 class="h2"><a href="#toaster">Toaster</a></h2>
+                <div>
+
+                </div>
+            </section>
+
+            <section class="docs__section" id="alert">
+                <h2 class="h2"><a href="#alert">Alert</a></h2>
+                <div class="row">
+                    <div class="col-4 col-lg-6 col-md-12 alert bg-green text-light-green">
+                        <i class="fa fa-check" aria-hidden="true"></i>
+                        <p>Hey! Your Tansaction has been Successfully Made!</p>
+                    </div>
+                    <div class="col-4 col-lg-6 col-md-12 alert bg-red text-white">
+                        <i class="fa fa-times" aria-hidden="true"></i>
+                        <p>Hey! Your Tansaction has failed. Please try again!</p>
+                    </div>
+                    <div class="col-4 col-lg-6 col-md-12 alert bg-yellow text-white">
+                        <i class="fa fa-exclamation" aria-hidden="true"></i>
+                        <p>Hey! Some warning is there. Please review it and do the needful!</p>
+                    </div>
+                    <div class="col-4 col-lg-6 col-md-12 alert bg-blue text-light-blue">
+                        <i class="fa fa-bug" aria-hidden="true"></i>
+                        <p>Just a notification message</p>
+                    </div>
+                    <div class="col-4 col-lg-6 col-md-12 alert bg-pink text-white">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                        <p>Another notification without icon</p>
+                    </div>
+                    <div class="col-4 col-lg-6 col-md-12 alert bg-violet text-white">
+                        <i class="fa fa-bell" aria-hidden="true"></i>
+                        <p>Just a notification message</p>
+                    </div>
+                    <div class="col-4 col-lg-6 col-md-12 alert bg-purple text-white">
+                        <p>A notification without icon</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <input type="checkbox" id="alert-visibility__btn" class="code-visibility-toggler">
+                    <div class="col-12">
+                        <label for="alert-visibility__btn" class="code-visibility__button">
+                            <i class="fa fa-code" aria-hidden="true"></i>
+                        </label>
+                    </div>
+                    <div class="col-12 code__container">
+                        <textarea class="code">
+                            <div class="col-4 col-lg-6 col-md-12 alert bg-green text-light-green">
+                                <i class="fa fa-check" aria-hidden="true"></i>
+                                <p>Hey! Your Tansaction has been Successfully Made!</p>
+                            </div>
+                            <div class="col-4 col-lg-6 col-md-12 alert bg-red text-white">
+                                <i class="fa fa-times" aria-hidden="true"></i>
+                                <p>Hey! Your Tansaction has failed. Please try again!</p>
+                            </div>
+                            <div class="col-4 col-lg-6 col-md-12 alert bg-yellow text-white">
+                                <i class="fa fa-exclamation" aria-hidden="true"></i>
+                                <p>Hey! Some warning is there. Please review it and do the needful!</p>
+                            </div>
+                            <div class="col-4 col-lg-6 col-md-12 alert bg-blue text-light-blue">
+                                <i class="fa fa-bug" aria-hidden="true"></i>
+                                <p>Just a notification message</p>
+                            </div>
+                            <div class="col-4 col-lg-6 col-md-12 alert bg-pink text-white">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                                <p>Another notification without icon</p>
+                            </div>
+                            <div class="col-4 col-lg-6 col-md-12 alert bg-violet text-white">
+                                <i class="fa fa-bell" aria-hidden="true"></i>
+                                <p>Just a notification message</p>
+                            </div>
+                            <div class="col-4 col-lg-6 col-md-12 alert bg-purple text-white">
+                                <p>A notification without icon</p>
+                            </div>
+                        </textarea>
+                    </div>
+                </div>
+                
+                
+                <div class="row">
+                    <div class="col-4 col-lg-6 col-md-12 alert-message bg-green text-light-green">
+                        <i class="fa fa-check" aria-hidden="true"></i>
+                        <p>Hey! Your Tansaction has been Successfully Made!</p>
+                    </div>
+                    <div class="col-4 col-lg-6 col-md-12 alert-message bg-red text-white">
+                        <i class="fa fa-times" aria-hidden="true"></i>
+                        <p>Hey! Your Tansaction has failed unfortunately. Please try again!</p>
+                    </div>
+                    <div class="col-4 col-lg-6 col-md-12 alert-message bg-yellow text-white">
+                        <i class="fa fa-exclamation" aria-hidden="true"></i>
+                        <p>Hey! Some warning is there. Please review it and do the needful!</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <input type="checkbox" id="alert-message-visibility__btn" class="code-visibility-toggler">
+                    <div class="col-12">
+                        <label for="alert-message-visibility__btn" class="code-visibility__button">
+                            <i class="fa fa-code" aria-hidden="true"></i>
+                        </label>
+                    </div>
+                    <div class="col-12 code__container">
+                        <textarea class="code">
+                            <div class="col-4 col-lg-6 col-md-12 alert-message bg-green text-light-green">
+                                <i class="fa fa-check" aria-hidden="true"></i>
+                                <p>Hey! Your Tansaction has been Successfully Made!</p>
+                            </div>
+                            <div class="col-4 col-lg-6 col-md-12 alert-message bg-red text-white">
+                                <i class="fa fa-times" aria-hidden="true"></i>
+                                <p>Hey! Your Tansaction has failed unfortunately. Please try again!</p>
+                            </div>
+                            <div class="col-4 col-lg-6 col-md-12 alert-message bg-yellow text-white">
+                                <i class="fa fa-exclamation" aria-hidden="true"></i>
+                                <p>Hey! Some warning is there. Please review it and do the needful!</p>
+                            </div>
+                        </textarea>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-4 col-lg-6 col-md-12 alert alert-message bg-green text-light-green">
+                        <i class="fa fa-check" aria-hidden="true"></i>
+                        <p>Hey! Your Tansaction has been Successfully Made!</p>
+                    </div>
+                    <div class="col-4 col-lg-6 col-md-12 alert alert-message bg-red text-white">
+                        <i class="fa fa-times" aria-hidden="true"></i>
+                        <p>Hey! Your Tansaction has failed unfortunately. Please try again!</p>
+                    </div>
+                    <div class="col-4 col-lg-6 col-md-12 alert alert-message bg-yellow text-white">
+                        <i class="fa fa-exclamation" aria-hidden="true"></i>
+                        <p>Hey! Some warning is there. Please review it and do the needful!</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <input type="checkbox" id="alert-alert-message-visibility__btn" class="code-visibility-toggler">
+                    <div class="col-12">
+                        <label for="alert-alert-message-visibility__btn" class="code-visibility__button">
+                            <i class="fa fa-code" aria-hidden="true"></i>
+                        </label>
+                    </div>
+                    <div class="col-12 code__container">
+                        <textarea class="code">
+                            <div class="col-4 col-lg-6 col-md-12 alert alert-message bg-green text-light-green">
+                                <i class="fa fa-check" aria-hidden="true"></i>
+                                <p>Hey! Your Tansaction has been Successfully Made!</p>
+                            </div>
+                            <div class="col-4 col-lg-6 col-md-12 alert alert-message bg-red text-white">
+                                <i class="fa fa-times" aria-hidden="true"></i>
+                                <p>Hey! Your Tansaction has failed unfortunately. Please try again!</p>
+                            </div>
+                            <div class="col-4 col-lg-6 col-md-12 alert alert-message bg-yellow text-white">
+                                <i class="fa fa-exclamation" aria-hidden="true"></i>
+                                <p>Hey! Some warning is there. Please review it and do the needful!</p>
+                            </div>
+                        </textarea>
+                    </div>
+                </div>
+
+            </section>
+
+            <section class="docs__section" id="spinner">
+                <h2 class="h2"><a href="#spinner">Spinner</a></h2>
+                <div class="row">
+                    <div class="row col-12">
+                        <div class="col-3 col-lg-4 col-md-6 col-sm-12">
+                            <div class="spinner-1">
+                            </div>
+                        </div>
+                        <div class="col-3 col-lg-4 col-md-6 col-sm-12">
+                            <div class="spinner-2">
+                            </div>
+                        </div>
+                        <div class="col-3 col-lg-4 col-md-6 col-sm-12">
+                            <div class="spinner-3">
+                            </div>
+                        </div>
+                        <div class="col-3 col-lg-4 col-md-6 col-sm-12">
+                            <div class="spinner-4">
+                            </div>
+                        </div>
+                        <div class="col-3 col-lg-4 col-md-6 col-sm-12">
+                            <div class="spinner-5">
+                            </div>
+                        </div>
+                        <div class="col-3 col-lg-4 col-md-6 col-sm-12" style="transform: translateY(50%);">
+                            <div class="spinner-6">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="docs__section" id="popup">
+                <h2 class="h2"><a href="#popup">Popup</a></h2>
+                <br>
+                <div class="row">
+
+                    <div class="col-12">
+                        <button type="button" class="btn btn--primary" id="small-popup-open-btn">small popup</button>
+                        <div class="popup__container popup--small" id="small-popup">
+                            <div class="popup">
+                                <div class="popup__header">
+                                    <p class="popup__title">Popup Header</p>
+                                    <i class="fa fa-times popup__close"></i>
+                                </div>
+                                <div class="popup__body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, eaque.</div>
+                                <div class="popup__footer">
+                                    <!-- <p class="footer__content">Please selest..</p> -->
+                                    <div class="popup__footer__buttons">
+                                        <button class="btn btn--secondary popup__close">cancel</button>
+                                        <button class="btn btn--primary">submit</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-12">
+                        <button type="button" class="btn btn--primary" id="popup-open-btn">Medium popup</button>
+                        <div class="popup__container" id="medium-popup">
+                            <div class="popup">
+                                <div class="popup__header">
+                                    <p class="popup__title">Popup Header</p>
+                                    <i class="fa fa-times popup__close"></i>
+                                </div>
+                                <div class="popup__body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, eaque.</div>
+                                <div class="popup__footer">
+                                    <!-- <p class="footer__content">Please selest..</p> -->
+                                    <div class="popup__footer__buttons">
+                                        <button class="btn btn--secondary popup__close">cancel</button>
+                                        <button class="btn btn--primary">submit</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-12">
+                        <button type="button" class="btn btn--primary" id="large-popup-open-btn">large popup</button>
+                        <div class="popup__container popup--large" id="large-popup">
+                            <div class="popup">
+                                <div class="popup__header">
+                                    <p class="popup__title">Popup Header</p>
+                                    <i class="fa fa-times popup__close"></i>
+                                </div>
+                                <div class="popup__body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, eaque.</div>
+                                <div class="popup__footer">
+                                    <!-- <p class="footer__content">Please selest..</p> -->
+                                    <div class="popup__footer__buttons">
+                                        <button class="btn btn--secondary popup__close">cancel</button>
+                                        <button class="btn btn--primary">submit</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                </div>
+            </section>
+            
+        </main>
+    </div>
+</body>
+</html>

@@ -1,0 +1,105 @@
+
+.components {
+    display: grid;
+    grid-template-columns: 1fr 10fr 1fr;
+    /* padding-top: 1em; */
+    grid-template-areas:
+                         "nav nav nav"
+                         ". foundation-section ."
+                         ". components-section ."
+                         ". footer .";
+}
+
+.nav-container {
+    position: relative;
+    grid-area: nav;
+    height: 60px;
+}
+
+.nav.nav--custom {
+    padding: 0.7em 1em;
+    border-bottom: 1px solid var(--color-grey);
+    box-shadow: 0 0 1px rgb(67 90 111 / 47%), 0 2px 4px -2px rgb(67 90 111 / 30%);
+    position: fixed;
+    width: 100%;
+    z-index: 99999;
+    background-color: white;
+}
+
+@media screen and (max-width: 710px) {
+    .nav #nav--custom__toggler:checked ~ .nav__content {
+        height: 120px;
+        box-shadow: 0 0 1px rgb(67 90 111 / 47%), 0 2px 4px -2px rgb(67 90 111 / 30%);
+    }
+}
+
+.nav--custom .nav__item.active {
+    color: var(--color-blue);
+    background-color: var(--app-primary-color);
+}
+
+.nav.nav--custom .nav__content {
+    background-color: white;
+}
+
+.logo {
+    height: 20px;
+    width: 20px;
+}
+
+/* .nav > .nav__content > .nav__list {
+    margin: 0 auto;
+} */
+
+.section--foundation {
+    grid-area: foundation-section;
+    margin: 1em 0;
+}
+
+.section--components {
+    grid-area: components-section;
+    margin: 1em 0;
+}
+
+.section__header {
+    padding: 1em;
+}
+
+.section__main .card {
+    border: none;
+    box-shadow: none;
+    text-decoration: none;
+}
+
+.section__main .card:hover {
+    background-color: var(--app-primary-color);
+}
+
+.section__main .card:active {
+    background-color: var(--color-blue);
+}
+
+.section--components .section--components__block {
+    margin: 1em 0;
+}
+
+.section--components .section--components__heading {
+    padding: 0 0.5em;
+    margin: 0 0.5em;
+    font-weight: 500;
+    color: var(--color-dark-grey);
+}
+
+.ratings__imagex {
+    background-color: var(--app-primary-color);
+}
+
+.images__images {
+    background-color: var(--app-primary-color);
+    height: 62%;
+}
+
+.images__images > img {
+    height: 100%;
+}
+
